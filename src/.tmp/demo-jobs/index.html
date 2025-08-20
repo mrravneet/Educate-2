@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>App Marketplace: Submit App | Front - Multipurpose Responsive Template</title>
+  <title>Jobs | Front - Multipurpose Responsive Template</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="../favicon.ico">
@@ -18,7 +18,6 @@
   <!-- bundlecss:vendor [..] -->
   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-  <link rel="stylesheet" href="../node_modules/quill/dist/quill.snow.css">
 
   <!-- CSS Front Template -->
   <!-- bundlecss:theme [..] ?v=1.0 -->
@@ -27,7 +26,7 @@
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light bg-white">
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light">
     <!-- Topbar -->
     <div class="container navbar-topbar">
       <nav class="js-mega-menu navbar-nav-wrap">
@@ -125,7 +124,7 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link " href="../demo-jobs/index.html">
+                    <a class="navbar-dropdown-menu-promo-link active" href="../demo-jobs/index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
@@ -210,7 +209,7 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link active" href="../demo-app-marketplace/index.html">
+                    <a class="navbar-dropdown-menu-promo-link " href="../demo-app-marketplace/index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
@@ -372,9 +371,9 @@
     <!-- End Topbar -->
 
     <div class="container">
-      <nav class="navbar-nav-wrap">
+      <nav class="js-mega-menu navbar-nav-wrap">
         <!-- Default Logo -->
-        <a class="navbar-brand" href="../demo-app-marketplace/index.html" aria-label="Front">
+        <a class="navbar-brand" href="../demo-jobs/index.html" aria-label="Front">
           <img class="navbar-brand-logo" src="../assets/svg/logos/logo.svg" alt="Logo">
         </a>
         <!-- End Default Logo -->
@@ -394,16 +393,36 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/index.html">Apps</a>
+              <a class="nav-link active" href="../demo-jobs/index.html">Home</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="listingsDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Listings</a>
+              <div class="hs-sub-menu dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
+                <a class="dropdown-item " href="../demo-jobs/job-list.html">Listing</a>
+                <a class="dropdown-item " href="../demo-jobs/job-grid.html">Listing (Grid)</a>
+              </div>
+            </li>
+            <!-- End Dropdown -->
+
+            <!-- Dropdown -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="pagesDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+              <div class="hs-sub-menu dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
+                <a class="dropdown-item " href="../demo-jobs/job-overview.html">Job Overview</a>
+                <a class="dropdown-item " href="../demo-jobs/apply-for-job.html">Apply for Job</a>
+                <a class="dropdown-item " href="../demo-jobs/employee.html">Employee (Applicant)</a>
+                <a class="dropdown-item " href="../demo-jobs/employer.html">Employer (Company)</a>
+              </div>
+            </li>
+            <!-- End Dropdown -->
+          
+            <li class="nav-item">
+              <a class="nav-link " href="../demo-jobs/upload-resume.html">Upload resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/app-overview.html">App Overview</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/search-results.html">Search Results</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary btn-transition" href="../demo-app-marketplace/submit-app.html">Submit app</a>
+              <a class="btn btn-primary btn-transition" href="../demo-jobs/post-job.html">Post a job</a>
             </li>
           </ul>
         </div>
@@ -416,160 +435,679 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Form Card -->
-    <div class="container content-space-2 content-space-b-lg-3">
-      <div class="w-lg-75 mx-lg-auto">
-        <!-- Heading -->
-        <div class="text-center mb-7">
-          <h1 class="card-title">Submit App</h1>
-          <p class="card-text">Submit your products today and get more exposure.</p>
-        </div>
-        <!-- End Heading -->
+    <!-- Hero -->
+    <div class="position-relative gradient-x-three-sm-primary rounded-2 content-space-t-md-1 content-space-b-md-2 mx-md-10">
+      <div class="container position-relative content-space-t-2 content-space-t-lg-3 content-space-b-1">
+        <div class="row position-relative zi-2">
+          <div class="col-lg-8">
+            <!-- Heading -->
+            <div class="w-lg-75 text-center text-lg-start mb-5 mb-lg-7">
+              <h1 class="display-4">Find the most<br><span class="text-primary text-highlight-warning">exciting</span> startup jobs</h1>
+            </div>
+            <!-- End Heading -->
 
-        <!-- Card -->
-        <div class="card card-bordered shadow-none">
-          <div class="card-body">
-            <!-- Form -->
             <form>
-              <!-- Form -->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Product logo</label>
+              <!-- Input Card -->
+              <div class="input-card input-card-sm">
+                <div class="input-card-form">
+                  <label for="jobTitleForm" class="form-label visually-hidden">Job, title, skills, or company</label>
+                  <div class="input-group input-group-merge">
+                    <span class="input-group-prepend input-group-text">
+                      <i class="bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control" id="jobTitleForm" placeholder="Job, title, skills, or company" aria-label="Job, title, skills, or company">
+                  </div>
+                </div>
 
-                <div class="col-sm-9">
+                <div class="input-card-form">
+                  <label for="cityForm" class="form-label visually-hidden">City, state, or zip</label>
+                  <div class="input-group input-group-merge">
+                    <span class="input-group-prepend input-group-text">
+                      <i class="bi-geo-alt"></i>
+                    </span>
+                    <input type="text" class="form-control" id="cityForm" placeholder="City, state, or zip" aria-label="City, state, or zip">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary">Search</button>
+              </div>
+              <!-- End Input Card -->
+            </form>
+            
+            <p class="form-text">Search through over 125,000 listings</p>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+
+        <div class="d-none d-lg-block col-lg-6 position-lg-absolute top-0 end-0">
+          <img class="img-fluid rounded-2" src="../assets/img/900x900/img23.jpg" alt="Image Description">
+
+          <!-- SVG Shape -->
+          <div class="position-absolute top-0 start-0 zi-n1 mt-n6 ms-n7" style="width: 10rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 335.2 335.2" width="100" height="100">
+              <circle fill="#FFC107" opacity=".7" cx="167.6" cy="167.6" r="130.1"/>
+            </svg>
+          </div>
+          <!-- End SVG Shape -->
+
+          <!-- SVG Shape -->
+          <div class="position-absolute bottom-0 end-0 zi-n1 mb-n6 me-n10" style="width: 10rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 335.2 335.2" width="120" height="120">
+              <circle fill="none" stroke="#377dff" stroke-width="75" cx="167.6" cy="167.6" r="130.1"/>
+            </svg>
+          </div>
+          <!-- End SVG Shape -->
+
+          <p class="form-text">Powered by: <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/google.svg" alt="Image Description"></p>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Card Grid -->
+    <div class="container content-space-2 content-space-t-lg-4 content-space-b-lg-3">
+      <!-- Heading -->
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-7">
+        <h2>Explore over 2 million tech and startup job-opportunities</h2>
+        <p>Find a job you love. <a class="link" href="#">Set your career interests.</a></p>
+      </div>
+      <!-- End Heading -->
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-5">
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card card-bordered h-100">
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col">
                   <!-- Media -->
                   <div class="d-flex align-items-center">
-                    <!-- Avatar -->
-                    <label class="avatar avatar-xl avatar-circle" for="avatarUploader">
-                      <img id="avatarImg" class="avatar-img" src="../assets/img/160x160/img2.jpg" alt="Image Description">
-                    </label>
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/mailchimp-icon.svg" alt="Image Description">
+                    </div>
 
-                    <div class="d-grid d-sm-flex gap-2 ms-4">
-                      <div class="btn btn-primary btn-sm form-attachment-btn">Upload Logo
-                        <input type="file" class="js-file-attach form-attachment-btn-label" id="avatarUploader"
-                               data-hs-file-attach-options='{
-                                  "textTarget": "#avatarImg",
-                                  "mode": "image",
-                                  "targetAttr": "src",
-                                  "resetTarget": ".js-file-attach-reset-img",
-                                  "resetImg": "../assets/img/160x160/img2.jpg",
-                                  "allowTypes": [".png", ".jpeg", ".jpg"]
-                               }'>
-                      </div>
-                      <!-- End Avatar -->
-
-                      <button type="button" class="js-file-attach-reset-img btn btn-white btn-sm">Delete</button>
+                    <div class="flex-grow-1 ms-3">
+                      <h6 class="card-title">
+                        <a class="text-dark" href="../demo-jobs/employer.html">Mailchimp</a>
+                        <img class="avatar avatar-xss ms-1" src="../assets/svg/illustrations/top-vendor.svg" alt="Review rating" data-toggle="tooltip" data-placement="top" title="Claimed profile">
+                      </h6>
                     </div>
                   </div>
                   <!-- End Media -->
                 </div>
+                <!-- End Col -->
               </div>
-              <!-- End Form -->
+              <!-- End Row -->
 
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppProjectName" class="col-sm-3 col-form-label">Project name</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control form-control-lg" id="submitAppProjectName" placeholder="project name" aria-label="project name">
-                </div>
-              </div>
-              <!-- End Form -->
+              <h3 class="card-title">
+                <a class="text-dark" href="../demo-jobs/employer.html">Senior B2B sales consultant</a>
+              </h3>
 
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppWebsite" class="col-sm-3 col-form-label form-label">App website</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control form-control-lg" id="submitAppWebsite" placeholder="https://example.com" aria-label="https://example.com">
-                </div>
-              </div>
-              <!-- End Form -->
+              <span class="d-block small text-body mb-1">$125k-$135k yearly</span>
 
-              <!-- Form -->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Preview image</label>
+              <span class="badge bg-soft-info text-info me-2">
+                <span class="legend-indicator bg-info"></span>Remote
+              </span>
+            </div>
+            <!-- End Card Body -->
 
-                <div class="col-sm-9">
-                  <!-- File Attachment Input -->
-                  <div id="dropzoneUpload" class="js-dropzone dz-dropzone dz-dropzone-card">
-                    <div class="dz-message">
-                      <img class="avatar mb-3" src="../assets/svg/illustrations/add-file.svg" alt="Image Description">
-                      <span class="d-block">Browse your device and upload images</span>
-                      <span class="d-block text-muted small">Maximum file size is 2MB</span>
-                    </div>
-                  </div>
-                  <!-- End File Attachment Input -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppCategoryLabel" class="col-sm-3 col-form-label form-label">Category</label>
-                
-                <div class="col-sm-9">
-                  <!-- Select -->
-                  <select class="form-select form-select-lg" id="submitAppCategoryLabel">
-                    <option value="Ecommerce">Ecommerce</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Marketplace">Marketplace</option>
-                    <option value="Social">Social</option>
-                    <option value="Others">Others</option>
-                  </select>
-                  <!-- End Select -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form-->
-              <div class="row mb-3">
-                <label for="shortDescriptionLabel" class="col-sm-3 col-form-label form-label">Short description</label>
-                
-                <div class="col-sm-9">
-                  <div class="d-flex justify-content-end">
-                    <span id="maxLengthShortDescriptionCountCharacters" class="form-label-secondary"></span>
-                  </div>
-
-                  <textarea class="js-count-characters form-control" id="shortDescriptionLabel" placeholder="This is to provide an idea of what does your product do. A good short summary will entice users to click and visit your page." maxlength="70"
-                          data-hs-count-characters-options='{
-                            "output": "#maxLengthShortDescriptionCountCharacters"
-                          }'></textarea>
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form-->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Detailed description</label>
-                
-                <div class="col-sm-9">
-                  <!-- Quill -->
-                  <div class="quill-custom">
-                    <div class="js-quill" style="height: 15rem;"
-                         data-hs-quill-options='{
-                         "placeholder": "A detailed summary will better explain your products to the audiences. Our users will see this in your dedicated product page.",
-                          "modules": {
-                            "toolbar": [
-                              ["bold", "italic", "underline", "strike", "link", "image", "blockquote", "code", {"list": "bullet"}]
-                            ]
-                          }
-                         }'>
-                    </div>
-                  </div>
-                  <!-- End Quill -->
-                </div>
-              </div>
-              <!-- End Form-->
-
-              <div class="text-center mt-5">
-                <button type="submit" class="btn btn-primary btn-lg">Submit your project</button>
-              </div>
-            </form>
-            <!-- End Form -->
+            <!-- Card Footer -->
+            <div class="card-footer pt-0">
+              <ul class="list-inline list-separator small text-body">
+                <li class="list-inline-item">Posted 7 hours ago</li>
+                <li class="list-inline-item">Oxford</li>
+                <li class="list-inline-item">Full time</li>
+              </ul>
+            </div>
+            <!-- End Card Footer -->
           </div>
+          <!-- End Card -->
         </div>
-        <!-- End Card -->
+        <!-- End Col -->
+
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card card-bordered h-100">
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col">
+                  <!-- Media -->
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/capsule-icon.svg" alt="Image Description">
+                    </div>
+
+                    <div class="flex-grow-1 ms-3">
+                      <h6 class="card-title">
+                        <a class="text-dark" href="../demo-jobs/employer.html">Capsule</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <!-- End Media -->
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+
+              <h3 class="card-title">
+                <a class="text-dark" href="../demo-jobs/employer.html">Office assistant/Social media assistant</a>
+              </h3>
+
+              <span class="d-block small text-body mb-1">$50-$135 hourly</span>
+            </div>
+            <!-- End Card Body -->
+
+            <!-- Card Footer -->
+            <div class="card-footer pt-0">
+              <ul class="list-inline list-separator small text-body">
+                <li class="list-inline-item">Posted 21 hours ago</li>
+                <li class="list-inline-item">Newcastle</li>
+                <li class="list-inline-item">Part time</li>
+              </ul>
+            </div>
+            <!-- End Card Footer -->
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card card-bordered h-100">
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col">
+                  <!-- Media -->
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/dropbox-icon.svg" alt="Image Description">
+                    </div>
+
+                    <div class="flex-grow-1 ms-3">
+                      <h6 class="card-title">
+                        <a class="text-dark" href="../demo-jobs/employer.html">Dropbox</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <!-- End Media -->
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+
+              <h3 class="card-title">
+                <a class="text-dark" href="../demo-jobs/employer.html">Marketing and Communications Manager</a>
+              </h3>
+
+              <span class="d-block small text-body mb-1">$5k monthly</span>
+            </div>
+            <!-- End Card Body -->
+
+            <!-- Card Footer -->
+            <div class="card-footer pt-0">
+              <ul class="list-inline list-separator small text-body">
+                <li class="list-inline-item">Posted 1 day ago</li>
+                <li class="list-inline-item">London</li>
+                <li class="list-inline-item">Full time</li>
+              </ul>
+            </div>
+            <!-- End Card Footer -->
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card card-bordered h-100">
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col">
+                  <!-- Media -->
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/prosperops-icon.svg" alt="Image Description">
+                    </div>
+
+                    <div class="flex-grow-1 ms-3">
+                      <h6 class="card-title">
+                        <a class="text-dark" href="../demo-jobs/employer.html">Prosperops</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <!-- End Media -->
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+
+              <h3 class="card-title">
+                <a class="text-dark" href="../demo-jobs/employer.html">Senior backend developer</a>
+              </h3>
+
+              <span class="d-block small text-body mb-1">$75k-$85k yearly</span>
+
+              <span class="badge bg-soft-info text-info me-2">
+                <span class="legend-indicator bg-info"></span>Remote
+              </span>
+            </div>
+            <!-- End Card Body -->
+
+            <!-- Card Footer -->
+            <div class="card-footer pt-0">
+              <ul class="list-inline list-separator small text-body">
+                <li class="list-inline-item">Posted 1 day ago</li>
+                <li class="list-inline-item">Liverpool</li>
+                <li class="list-inline-item">Full time</li>
+              </ul>
+            </div>
+            <!-- End Card Footer -->
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card card-bordered h-100">
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col">
+                  <!-- Media -->
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/airbnb-icon.svg" alt="Image Description">
+                    </div>
+
+                    <div class="flex-grow-1 ms-3">
+                      <h6 class="card-title">
+                        <a class="text-dark" href="../demo-jobs/employer.html">Airbnb</a>
+                        <img class="avatar avatar-xss ms-1" src="../assets/svg/illustrations/top-vendor.svg" alt="Review rating" data-toggle="tooltip" data-placement="top" title="Claimed profile">
+                      </h6>
+                    </div>
+                  </div>
+                  <!-- End Media -->
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+
+              <h3 class="card-title">
+                <a class="text-dark" href="../demo-jobs/employer.html">Senior product manager</a>
+              </h3>
+
+              <span class="d-block small text-body mb-1">$76k-$98k yearly</span>
+            </div>
+            <!-- End Card Body -->
+
+            <!-- Card Footer -->
+            <div class="card-footer pt-0">
+              <ul class="list-inline list-separator small text-body">
+                <li class="list-inline-item">Posted 2 days ago</li>
+                <li class="list-inline-item">London</li>
+                <li class="list-inline-item">Full time</li>
+              </ul>
+            </div>
+            <!-- End Card Footer -->
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card card-bordered h-100">
+            <!-- Card Body -->
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col">
+                  <!-- Media -->
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-sm avatar-4x3" src="../assets/svg/brands/guideline-icon.svg" alt="Image Description">
+                    </div>
+
+                    <div class="flex-grow-1 ms-3">
+                      <h6 class="card-title">
+                        <a class="text-dark" href="../demo-jobs/employer.html">Guideline</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <!-- End Media -->
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+
+              <h3 class="card-title">
+                <a class="text-dark" href="../demo-jobs/employer.html">iOS Engineer</a>
+              </h3>
+
+              <span class="d-block small text-body mb-1">$500-$1000 weekly</span>
+
+              <span class="badge bg-soft-info text-info me-2">
+                <span class="legend-indicator bg-info"></span>Remote
+              </span>
+            </div>
+            <!-- End Card Body -->
+
+            <!-- Card Footer -->
+            <div class="card-footer pt-0">
+              <ul class="list-inline list-separator small text-body">
+                <li class="list-inline-item">Posted 3 days ago</li>
+                <li class="list-inline-item">Manchester</li>
+                <li class="list-inline-item">Part time</li>
+              </ul>
+            </div>
+            <!-- End Card Footer -->
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+
+      <div class="text-center">
+        <a class="btn btn-outline-primary" href="../demo-jobs/job-list.html">View all jobs <i class="bi-chevron-right small ms-1"></i></a>
       </div>
     </div>
-    <!-- End Form Card -->
+    <!-- End Card Grid -->
+
+    <!-- Testimonials -->
+    <div class="overflow-hidden gradient-x-three-sm-primary rounded-2 mx-md-10">
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row justify-content-center align-items-lg-center">
+          <div class="col-10 col-sm-8 col-lg-5 mb-10 mb-lg-0">
+            <div class="position-relative">
+              <img class="img-fluid rounded-2" src="../assets/img/900x900/img24.jpg" alt="Image Description">
+
+              <!-- SVG Shape -->
+              <div class="position-absolute top-0 start-0 zi-n1 mt-n6 ms-n7" style="width: 10rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 335.2 335.2" width="100" height="100">
+                  <circle fill="#FFC107" opacity=".7" cx="167.6" cy="167.6" r="130.1"/>
+                </svg>
+              </div>
+              <!-- End SVG Shape -->
+
+              <!-- SVG Shape -->
+              <div class="position-absolute bottom-0 end-0 zi-n1 mb-n6 me-n10" style="width: 10rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 335.2 335.2" width="120" height="120">
+                  <circle fill="none" stroke="#377dff" stroke-width="75" cx="167.6" cy="167.6" r="130.1"/>
+                </svg>
+              </div>
+              <!-- End SVG Shape -->
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7">
+            <div class="ps-lg-6">
+              <div class="mb-3">
+                <img class="avatar" src="../assets/svg/brands/capsule-icon.svg" alt="Image Description">
+              </div>
+              
+              <!-- Blockquote -->
+              <figure class="mb-5">
+                <blockquote class="blockquote blockquote-lg">" Save time and effort in your hiring journey. Front's simple and powerful tools let you source, screen, and hire faster. "</blockquote>
+                
+                <figcaption class="blockquote-footer">
+                  Anna Lowry
+                  <span class="blockquote-footer-source">HR Director | Capsule</span>
+                </figcaption>
+              </figure>
+              <!-- End Blockquote -->
+
+              <div class="row">
+                <div class="col-sm-6 col-md-4 mb-3 mb-sm-0">
+                  <h2 class="text-primary mb-1">59%</h2>
+                  <p class="small mb-0">in budget saved on unconverting ads</p>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-sm-6 col-md-4 mb-3 mb-sm-0">
+                  <h2 class="text-primary mb-1">27%</h2>
+                  <p class="small mb-0">in time saved on campaign management</p>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-sm-6 col-md-4">
+                  <h2 class="text-primary mb-1">2.1x</h2>
+                  <p class="small mb-0">more split tests and experiments</p>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+    </div>
+    <!-- End Testimonials -->
+
+    <!-- Card Grid -->
+    <div class="container content-space-2 content-space-lg-3">
+      <!-- Heading -->
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-7">
+        <h2>Explore Startups</h2>
+        <p>Find a job you love. <a class="link" href="#">Set your career interests.</a></p>
+      </div>
+      <!-- End Heading -->
+
+      <div class="row row-cols-1 row-cols-sm-2 1 row-cols-md-3 row-cols-lg-4 mb-5">
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">Management</h5>
+                  <p class="card-text text-body small">4 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">App Development</h5>
+                  <p class="card-text text-body small">26 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">Arts &amp; Entertainment</h5>
+                  <p class="card-text text-body small">9 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">Accounting</h5>
+                  <p class="card-text text-body small">11 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">UI Designer</h5>
+                  <p class="card-text text-body small">37 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">Apps</h5>
+                  <p class="card-text text-body small">2 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">Content Writer</h5>
+                  <p class="card-text text-body small">10 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-3 mb-sm-4">
+          <!-- Card -->
+          <a class="card card-sm card-bordered card-transition h-100" href="../demo-jobs/job-overview.html">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title text-inherit">Analytics</h5>
+                  <p class="card-text text-body small">14 job positions</p>
+                </div>
+                <!-- End Col -->
+                
+                <div class="col-auto">
+                  <span class="text-muted">
+                    <i class="bi-chevron-right small"></i>
+                  </span>
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Row -->
+            </div>
+          </a>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+
+      <div class="text-center">
+        <a class="btn btn-outline-primary" href="../demo-jobs/job-list.html">View all startups <i class="bi-chevron-right small ms-1"></i></a>
+      </div>
+    </div>
+    <!-- End Card Grid -->
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
@@ -774,20 +1312,13 @@
   <!-- JS Implementing Plugins -->
   <!-- bundlejs:vendor [..] -->
   <script src="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+  <script src="../assets/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="../assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-  <script src="../assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
-  <script src="../assets/vendor/hs-count-characters/dist/js/hs-count-characters.js"></script>
-  <script src="../node_modules/quill/dist/quill.min.js"></script>
-  <script src="../node_modules/dropzone/dist/min/dropzone.min.js"></script>
 
   <!-- JS Front -->
   <!-- bundlejs:theme [..] -->
   <script src="../assets/js/hs.core.js"></script>
   <script src="../assets/js/hs.bs-dropdown.js"></script>
-  <script src="../assets/js/hs.bs-validation.js"></script>
-  <script src="../assets/js/hs.quill.js"></script>
-  <script src="../assets/js/hs.dropzone.js"></script>
-
   <!-- JS Plugins Init. -->
   <script>
     (function() {
@@ -800,14 +1331,9 @@
         })
 
 
-      // INITIALIZATION OF BOOTSTRAP VALIDATION
+      // INITIALIZATION OF SHOW ANIMATIONS
       // =======================================================
-      HSBsValidation.init('.js-validate', {
-        onSubmit: data => {
-          data.event.preventDefault()
-          alert('Submited')
-        }
-      })
+      new HSShowAnimation('.js-animation-link')
 
 
       // INITIALIZATION OF BOOTSTRAP DROPDOWN
@@ -818,26 +1344,6 @@
       // INITIALIZATION OF GO TO
       // =======================================================
       new HSGoTo('.js-go-to')
-
-
-      // INITIALIZATION OF FILE ATTACH
-      // =======================================================
-      new HSFileAttach('.js-file-attach')
-
-
-      // INITIALIZATION OF COUNT CHARACTERS
-      // =======================================================
-      new HSCountCharacters('.js-count-characters')
-
-
-      // INITIALIZATION OF QUILLJS EDITOR
-      // =======================================================
-      HSCore.components.HSQuill.init('.js-quill')
-
-
-      // INITIALIZATION OF DROPZONE
-      // =======================================================
-      HSCore.components.HSDropzone.init('.js-dropzone')
     })()
   </script>
 </body>

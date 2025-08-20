@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>App Marketplace: Submit App | Front - Multipurpose Responsive Template</title>
+  <title>Help Desk: Article Overview | Front - Multipurpose Responsive Template</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="../favicon.ico">
@@ -18,7 +18,6 @@
   <!-- bundlecss:vendor [..] -->
   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-  <link rel="stylesheet" href="../node_modules/quill/dist/quill.snow.css">
 
   <!-- CSS Front Template -->
   <!-- bundlecss:theme [..] ?v=1.0 -->
@@ -210,7 +209,7 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link active" href="../demo-app-marketplace/index.html">
+                    <a class="navbar-dropdown-menu-promo-link " href="../demo-app-marketplace/index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
@@ -245,7 +244,7 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link " href="../demo-help-desk/index.html">
+                    <a class="navbar-dropdown-menu-promo-link active" href="../demo-help-desk/index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
@@ -374,7 +373,7 @@
     <div class="container">
       <nav class="navbar-nav-wrap">
         <!-- Default Logo -->
-        <a class="navbar-brand" href="../demo-app-marketplace/index.html" aria-label="Front">
+        <a class="navbar-brand" href="../demo-help-desk/index.html" aria-label="Front">
           <img class="navbar-brand-logo" src="../assets/svg/logos/logo.svg" alt="Logo">
         </a>
         <!-- End Default Logo -->
@@ -394,16 +393,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/index.html">Apps</a>
+              <a class="nav-link " href="../demo-help-desk/index.html">Help Page</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/app-overview.html">App Overview</a>
+              <a class="nav-link " href="../demo-help-desk/listing.html">Listing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/search-results.html">Search Results</a>
+              <a class="nav-link active" href="../demo-help-desk/article-overview.html">Article Overview</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary btn-transition" href="../demo-app-marketplace/submit-app.html">Submit app</a>
+              <button class="btn btn-primary btn-transition" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
             </li>
           </ul>
         </div>
@@ -416,160 +415,132 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Form Card -->
-    <div class="container content-space-2 content-space-b-lg-3">
-      <div class="w-lg-75 mx-lg-auto">
-        <!-- Heading -->
-        <div class="text-center mb-7">
-          <h1 class="card-title">Submit App</h1>
-          <p class="card-text">Submit your products today and get more exposure.</p>
+    <!-- Search -->
+    <div class="bg-dark" style="background-image: url(../assets/svg/components/wave-pattern-light.svg);">
+      <div class="container py-4">
+        <div class="w-lg-75 mx-lg-auto">
+          <form>
+            <!-- Input Card -->
+            <div class="input-card">
+              <div class="input-card-form">
+                <div class="input-group input-group-merge">
+                  <label for="searchAnswersForm" class="form-label visually-hidden">Search for answers</label>
+                  <span class="input-group-prepend input-group-text">
+                    <i class="bi-search"></i>
+                  </span>
+                  <input type="text" class="form-control" id="searchAnswersForm" placeholder="Search for answers" aria-label="Search for answers">
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary">
+                <i class="bi-arrow-right"></i>
+              </button>
+            </div>
+            <!-- End Input Card -->
+          </form>
         </div>
-        <!-- End Heading -->
+      </div>
+    </div>
+    <!-- End Search -->
 
+    <!-- Breadcrumb -->
+    <div class="container py-5">
+      <div class="w-lg-75 mx-lg-auto">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="../demo-help-desk/index.html">Front Help Center</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="../demo-help-desk/listing.html">Getting Started</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">What's Front?</li>
+          </ol>
+        </nav>
+        <!-- End Breadcrumb -->
+      </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Card -->
+    <div class="container content-space-b-2">
+      <div class="w-lg-75 mx-lg-auto">
         <!-- Card -->
-        <div class="card card-bordered shadow-none">
-          <div class="card-body">
-            <!-- Form -->
-            <form>
-              <!-- Form -->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Product logo</label>
+        <div class="card card-bordered p-4 p-md-7">
+          <h1 class="card-title h2">What's Front?</h1>
+          <p class="card-text">How Front works, what it can do for your business and what makes it different to other solutions.</p>
 
-                <div class="col-sm-9">
-                  <!-- Media -->
-                  <div class="d-flex align-items-center">
-                    <!-- Avatar -->
-                    <label class="avatar avatar-xl avatar-circle" for="avatarUploader">
-                      <img id="avatarImg" class="avatar-img" src="../assets/img/160x160/img2.jpg" alt="Image Description">
-                    </label>
+          <!-- Media -->
+          <div class="d-flex mb-5">
+            <div class="flex-shrink-0">
+              <img class="avatar avatar-sm avatar-circle" src="../assets/img/160x160/img9.jpg" alt="Image Description">
+            </div>
 
-                    <div class="d-grid d-sm-flex gap-2 ms-4">
-                      <div class="btn btn-primary btn-sm form-attachment-btn">Upload Logo
-                        <input type="file" class="js-file-attach form-attachment-btn-label" id="avatarUploader"
-                               data-hs-file-attach-options='{
-                                  "textTarget": "#avatarImg",
-                                  "mode": "image",
-                                  "targetAttr": "src",
-                                  "resetTarget": ".js-file-attach-reset-img",
-                                  "resetImg": "../assets/img/160x160/img2.jpg",
-                                  "allowTypes": [".png", ".jpeg", ".jpg"]
-                               }'>
-                      </div>
-                      <!-- End Avatar -->
-
-                      <button type="button" class="js-file-attach-reset-img btn btn-white btn-sm">Delete</button>
-                    </div>
-                  </div>
-                  <!-- End Media -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppProjectName" class="col-sm-3 col-form-label">Project name</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control form-control-lg" id="submitAppProjectName" placeholder="project name" aria-label="project name">
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppWebsite" class="col-sm-3 col-form-label form-label">App website</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control form-control-lg" id="submitAppWebsite" placeholder="https://example.com" aria-label="https://example.com">
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Preview image</label>
-
-                <div class="col-sm-9">
-                  <!-- File Attachment Input -->
-                  <div id="dropzoneUpload" class="js-dropzone dz-dropzone dz-dropzone-card">
-                    <div class="dz-message">
-                      <img class="avatar mb-3" src="../assets/svg/illustrations/add-file.svg" alt="Image Description">
-                      <span class="d-block">Browse your device and upload images</span>
-                      <span class="d-block text-muted small">Maximum file size is 2MB</span>
-                    </div>
-                  </div>
-                  <!-- End File Attachment Input -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppCategoryLabel" class="col-sm-3 col-form-label form-label">Category</label>
-                
-                <div class="col-sm-9">
-                  <!-- Select -->
-                  <select class="form-select form-select-lg" id="submitAppCategoryLabel">
-                    <option value="Ecommerce">Ecommerce</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Marketplace">Marketplace</option>
-                    <option value="Social">Social</option>
-                    <option value="Others">Others</option>
-                  </select>
-                  <!-- End Select -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form-->
-              <div class="row mb-3">
-                <label for="shortDescriptionLabel" class="col-sm-3 col-form-label form-label">Short description</label>
-                
-                <div class="col-sm-9">
-                  <div class="d-flex justify-content-end">
-                    <span id="maxLengthShortDescriptionCountCharacters" class="form-label-secondary"></span>
-                  </div>
-
-                  <textarea class="js-count-characters form-control" id="shortDescriptionLabel" placeholder="This is to provide an idea of what does your product do. A good short summary will entice users to click and visit your page." maxlength="70"
-                          data-hs-count-characters-options='{
-                            "output": "#maxLengthShortDescriptionCountCharacters"
-                          }'></textarea>
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form-->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Detailed description</label>
-                
-                <div class="col-sm-9">
-                  <!-- Quill -->
-                  <div class="quill-custom">
-                    <div class="js-quill" style="height: 15rem;"
-                         data-hs-quill-options='{
-                         "placeholder": "A detailed summary will better explain your products to the audiences. Our users will see this in your dedicated product page.",
-                          "modules": {
-                            "toolbar": [
-                              ["bold", "italic", "underline", "strike", "link", "image", "blockquote", "code", {"list": "bullet"}]
-                            ]
-                          }
-                         }'>
-                    </div>
-                  </div>
-                  <!-- End Quill -->
-                </div>
-              </div>
-              <!-- End Form-->
-
-              <div class="text-center mt-5">
-                <button type="submit" class="btn btn-primary btn-lg">Submit your project</button>
-              </div>
-            </form>
-            <!-- End Form -->
+            <div class="flex-grow-1 ms-3">
+              <p class="card-text text-dark small mb-0">1 article in this collection</p>
+              <p class="card-text text-dark small">
+                <span class="text-muted">Written by</span>
+                Luisa Woodfine
+                <span class="text-muted">and</span>
+                Neil Galavan
+              </p>
+            </div>
           </div>
+          <!-- End Media -->
+
+          <p>Front is an incredibly beautiful, fully responsive, and mobile-first projects on the web – it is the perfect starting point for any creative and professional sites. Get started with Front's components and options for laying out your Front project, including SVG components, powerful scripts, fully detailed documentation, and yet developer friendly code.</p>
+
+          <h3>Free updates and support</h3>
+          <p>We would like to draw your attention to the fact that after purchasing a Front Template copy, you get the right for a <span class="fw-semibold">lifetime</span> entitlement to download updates for <span class="fw-semibold">FREE!</span> Need help? For any questions or concerns, reach us out at <a class="link" href="mailto:hello@example.com">hello@example.com</a>.</p>
+
+          <ul class="list-py-1">
+            <li><span class="fw-semibold">Free updates:</span> Front offers a lifetime free updates. This means you will never pay for any bug-fixes and compatibility upgrades for your theme, ever.</li>
+            <li><span class="fw-semibold">Technical support:</span> As always, our Customer Support team is available 24/7 to answer any questions you might have. We will do our best to get back to you within <span class="fw-semibold">24-48 hours</span>.</li>
+          </ul>
+
+          <p>Front Template is built by the team that has customers in the background such us Stanford University, The University of Maryland, University of Victoria and many more Governments, Corporate Agencies. To bring the most modern look of any HTML5 template across all Marketplaces – powered by Bootstrap 4, Front sets the new standard with breathtaking design, top-notch support, and incredible featured packed updates that will save your precious time and gives trendy look to all your web projects. On top of that the creators of Bootstrap have closely monitored the ongoing process of the Front and helped to achieve an enormous result.</p>
+
+          <!-- Info -->
+          <div class="border-top border-bottom text-center py-7 my-5">
+            <div class="mb-3">
+              <h3>Was this article helpful?</h3>
+            </div>
+
+            <div class="mb-3">
+              <button type="button" class="btn btn-primary my-1 me-sm-2">
+                <i class="bi-hand-thumbs-up me-1"></i> Yes, thanks!
+              </button>
+              <button type="button" class="btn btn-soft-primary my-1">
+                <i class="bi-hand-thumbs-down me-1"></i> Not, really
+              </button>
+            </div>
+
+            <p class="small mb-0">93 out of 132 found this helpful</p>
+          </div>
+          <!-- End Info -->
+
+          <div class="mb-3">
+            <h3>Related articles</h3>
+          </div>
+
+          <!-- List -->
+          <ul class="list-unstyled list-pointer">
+            <li class="list-pointer-item">
+              <a class="link link-secondary" href="../demo-help-desk/article-overview.html">Getting started for workspace creators</a>
+            </li>
+            <li class="list-pointer-item">
+              <a class="link link-secondary" href="../demo-help-desk/article-overview.html">Edit your profile</a>
+            </li>
+            <li class="list-pointer-item">
+              <a class="link link-secondary" href="../demo-help-desk/article-overview.html">View and download invoices</a>
+            </li>
+          </ul>
+          <!-- End List -->
         </div>
         <!-- End Card -->
       </div>
     </div>
-    <!-- End Form Card -->
+    <!-- End Card -->
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
@@ -748,6 +719,181 @@
   <!-- ========== END FOOTER ========== -->
 
   <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Log In -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-close">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- End Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+          <!-- Log in -->
+          <div id="loginModalFormLogin">
+            <!-- Heading -->
+            <div class="text-center mb-7">
+              <h3 class="modal-title">Log in to Front</h3>
+              <p>Login to manage your account</p>
+            </div>
+            <!-- End Heading -->
+
+            <form class="js-validate needs-validation" novalidate>
+              <!-- Form -->
+              <div class="mb-3">
+                <label class="form-label" for="loginModalFormLoginEmail">Your email</label>
+                <input type="email" class="form-control" name="email" id="loginModalFormLoginEmail" placeholder="email@site.com" aria-label="email@site.com" required>
+                <span class="invalid-feedback">Please enter a valid email address.</span>
+              </div>
+              <!-- End Form -->
+
+              <!-- Form -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <label class="form-label" for="loginModalFormLoginPassword">Password</label>
+
+                  <a class="js-animation-link form-label-link" href="javascript:;"
+                     data-hs-show-animation-options='{
+                       "targetSelector": "#loginModalFormResetPassword",
+                       "groupName": "idForm"
+                     }'>Forgot Password?</a>
+                </div>
+
+                <input type="password" class="form-control form-control-lg" name="password" id="loginModalFormLoginPassword" placeholder="8+ characters required" aria-label="8+ characters required" required minlength="8">
+                <span class="invalid-feedback">Please enter a valid password.</span>
+              </div>
+              <!-- End Form -->
+
+              <div class="d-grid gap-3 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+              
+                <span class="divider-center">OR</span>
+              
+                <button type="submit" class="btn btn-ghost-secondary">
+                  <span class="d-flex justify-content-center align-items-center">
+                    <img class="avatar avatar-xss me-2" src="../assets/svg/brands/google-icon.svg" alt="Image Description">
+                    Log in with Google
+                  </span>
+                </button>
+
+                <p>Don't have an account yet?
+                  <a class="js-animation-link link" href="javascript:;" role="button"
+                     data-hs-show-animation-options='{
+                       "targetSelector": "#loginModalFormSignup",
+                       "groupName": "idForm"
+                     }'>Sign up</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <!-- End Log in -->
+
+          <!-- Log in -->
+          <div id="loginModalFormSignup" style="display: none; opacity: 0;">
+            <!-- Heading -->
+            <div class="text-center mb-7">
+              <h3 class="modal-title">Sign up</h3>
+              <p>Fill out the form to get started</p>
+            </div>
+            <!-- End Heading -->
+
+            <form class="js-validate needs-validation" novalidate>
+              <!-- Form -->
+              <div class="mb-3">
+                <label class="form-label" for="loginModalFormSignupEmail">Your email</label>
+                <input type="email" class="form-control form-control-lg" name="email" id="loginModalFormSignupEmail" placeholder="email@site.com" aria-label="email@site.com" required>
+                <span class="invalid-feedback">Please enter a valid email address.</span>
+              </div>
+              <!-- End Form -->
+
+              <!-- Form -->
+              <div class="mb-3">
+                <label class="form-label" for="loginModalFormSignupPassword">Password</label>
+                <input type="password" class="form-control form-control-lg" name="password" id="loginModalFormSignupPassword" placeholder="8+ characters required" aria-label="8+ characters required" required>
+                <span class="invalid-feedback">Your password is invalid. Please try again.</span>
+              </div>
+              <!-- End Form -->
+
+              <!-- Form -->
+              <div class="mb-3" data-hs-validation-validate-class>
+                <label class="form-label" for="loginModalFormSignupConfirmPassword">Confirm password</label>
+                <input type="password" class="form-control form-control-lg" name="confirmPassword" id="loginModalFormSignupConfirmPassword" placeholder="8+ characters required" aria-label="8+ characters required" required
+                       data-hs-validation-equal-field="#loginModalFormSignupPassword">
+                <span class="invalid-feedback">Password does not match the confirm password.</span>
+              </div>
+              <!-- End Form -->
+
+              <div class="text-center mb-3">
+                <p class="small mb-0">By continuing you agree to our <a href="#">Terms and Conditions</a></p>
+              </div>
+
+              <div class="d-grid gap-3 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
+              
+                <span class="divider-center">OR</span>
+              
+                <button type="submit" class="btn btn-ghost-secondary">
+                  <span class="d-flex justify-content-center align-items-center">
+                    <img class="avatar avatar-xss me-2" src="../assets/svg/brands/google-icon.svg" alt="Image Description">
+                    Sign up with Google
+                  </span>
+                </button>
+
+                <p>Already have an account?
+                  <a class="js-animation-link link" href="javascript:;" role="button"
+                     data-hs-show-animation-options='{
+                       "targetSelector": "#loginModalFormLogin",
+                       "groupName": "idForm"
+                     }'>Log in</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <!-- End Log in -->
+
+          <!-- Reset Password -->
+          <div id="loginModalFormResetPassword" style="display: none; opacity: 0;">
+            <!-- Heading -->
+            <div class="text-center mb-7">
+              <h3 class="modal-title">Forgot password</h3>
+              <p>Instructions will be sent to you</p>
+            </div>
+            <!-- End Heading -->
+
+            <form class="js-validate needs-validation" novalidate>
+              <!-- Form -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <label class="form-label" for="signupModalFormResetPasswordEmail" tabindex="0">Your email</label>
+
+                  <a class="js-animation-link form-label-link" href="javascript:;"
+                     data-hs-show-animation-options='{
+                         "targetSelector": "#loginModalFormLogin",
+                         "groupName": "idForm"
+                       }'>
+                    <i class="bi-chevron-left small"></i> Back to Log in
+                  </a>
+                </div>
+
+                <input type="email" class="form-control form-control-lg" name="email" id="signupModalFormResetPasswordEmail" tabindex="1" placeholder="Enter your email address" aria-label="Enter your email address" required>
+                <span class="invalid-feedback">Please enter a valid email address.</span>
+              </div>
+              <!-- End Form -->
+
+              <div class="d-grid gap-3 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- End Reset Password -->
+        </div>
+        <!-- End Body -->
+      </div>
+    </div>
+  </div>
+
   <!-- Go To -->
   <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
      data-hs-go-to-options='{
@@ -774,19 +920,14 @@
   <!-- JS Implementing Plugins -->
   <!-- bundlejs:vendor [..] -->
   <script src="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+  <script src="../assets/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="../assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-  <script src="../assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
-  <script src="../assets/vendor/hs-count-characters/dist/js/hs-count-characters.js"></script>
-  <script src="../node_modules/quill/dist/quill.min.js"></script>
-  <script src="../node_modules/dropzone/dist/min/dropzone.min.js"></script>
 
   <!-- JS Front -->
   <!-- bundlejs:theme [..] -->
   <script src="../assets/js/hs.core.js"></script>
   <script src="../assets/js/hs.bs-dropdown.js"></script>
   <script src="../assets/js/hs.bs-validation.js"></script>
-  <script src="../assets/js/hs.quill.js"></script>
-  <script src="../assets/js/hs.dropzone.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
@@ -798,6 +939,11 @@
             position: 'left'
           }
         })
+
+
+      // INITIALIZATION OF SHOW ANIMATIONS
+      // =======================================================
+      new HSShowAnimation('.js-animation-link')
 
 
       // INITIALIZATION OF BOOTSTRAP VALIDATION
@@ -818,26 +964,6 @@
       // INITIALIZATION OF GO TO
       // =======================================================
       new HSGoTo('.js-go-to')
-
-
-      // INITIALIZATION OF FILE ATTACH
-      // =======================================================
-      new HSFileAttach('.js-file-attach')
-
-
-      // INITIALIZATION OF COUNT CHARACTERS
-      // =======================================================
-      new HSCountCharacters('.js-count-characters')
-
-
-      // INITIALIZATION OF QUILLJS EDITOR
-      // =======================================================
-      HSCore.components.HSQuill.init('.js-quill')
-
-
-      // INITIALIZATION OF DROPZONE
-      // =======================================================
-      HSCore.components.HSDropzone.init('.js-dropzone')
     })()
   </script>
 </body>

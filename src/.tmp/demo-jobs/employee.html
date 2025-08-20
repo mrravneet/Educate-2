@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>App Marketplace: Submit App | Front - Multipurpose Responsive Template</title>
+  <title>Jobs: Employee (Applicant) | Front - Multipurpose Responsive Template</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="../favicon.ico">
@@ -18,7 +18,6 @@
   <!-- bundlecss:vendor [..] -->
   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-  <link rel="stylesheet" href="../node_modules/quill/dist/quill.snow.css">
 
   <!-- CSS Front Template -->
   <!-- bundlecss:theme [..] ?v=1.0 -->
@@ -27,7 +26,7 @@
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light bg-white">
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light">
     <!-- Topbar -->
     <div class="container navbar-topbar">
       <nav class="js-mega-menu navbar-nav-wrap">
@@ -125,7 +124,7 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link " href="../demo-jobs/index.html">
+                    <a class="navbar-dropdown-menu-promo-link active" href="../demo-jobs/index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
@@ -210,7 +209,7 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link active" href="../demo-app-marketplace/index.html">
+                    <a class="navbar-dropdown-menu-promo-link " href="../demo-app-marketplace/index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
@@ -372,9 +371,9 @@
     <!-- End Topbar -->
 
     <div class="container">
-      <nav class="navbar-nav-wrap">
+      <nav class="js-mega-menu navbar-nav-wrap">
         <!-- Default Logo -->
-        <a class="navbar-brand" href="../demo-app-marketplace/index.html" aria-label="Front">
+        <a class="navbar-brand" href="../demo-jobs/index.html" aria-label="Front">
           <img class="navbar-brand-logo" src="../assets/svg/logos/logo.svg" alt="Logo">
         </a>
         <!-- End Default Logo -->
@@ -394,16 +393,36 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/index.html">Apps</a>
+              <a class="nav-link " href="../demo-jobs/index.html">Home</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="listingsDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Listings</a>
+              <div class="hs-sub-menu dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
+                <a class="dropdown-item " href="../demo-jobs/job-list.html">Listing</a>
+                <a class="dropdown-item " href="../demo-jobs/job-grid.html">Listing (Grid)</a>
+              </div>
+            </li>
+            <!-- End Dropdown -->
+
+            <!-- Dropdown -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="pagesDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+              <div class="hs-sub-menu dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
+                <a class="dropdown-item " href="../demo-jobs/job-overview.html">Job Overview</a>
+                <a class="dropdown-item " href="../demo-jobs/apply-for-job.html">Apply for Job</a>
+                <a class="dropdown-item active" href="../demo-jobs/employee.html">Employee (Applicant)</a>
+                <a class="dropdown-item " href="../demo-jobs/employer.html">Employer (Company)</a>
+              </div>
+            </li>
+            <!-- End Dropdown -->
+          
+            <li class="nav-item">
+              <a class="nav-link " href="../demo-jobs/upload-resume.html">Upload resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/app-overview.html">App Overview</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="../demo-app-marketplace/search-results.html">Search Results</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary btn-transition" href="../demo-app-marketplace/submit-app.html">Submit app</a>
+              <a class="btn btn-primary btn-transition" href="../demo-jobs/post-job.html">Post a job</a>
             </li>
           </ul>
         </div>
@@ -416,160 +435,294 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Form Card -->
-    <div class="container content-space-2 content-space-b-lg-3">
-      <div class="w-lg-75 mx-lg-auto">
-        <!-- Heading -->
-        <div class="text-center mb-7">
-          <h1 class="card-title">Submit App</h1>
-          <p class="card-text">Submit your products today and get more exposure.</p>
-        </div>
-        <!-- End Heading -->
+    <!-- Page Header -->
+    <div class="container content-space-t-2">
+      <div class="page-header">
+        <!-- Media -->
+        <div class="d-flex align-items-lg-center">
+          <div class="flex-shrink-0">
+            <img class="avatar avatar-xl avatar-circle" src="../assets/img/160x160/img9.jpg" alt="Image Description">
+          </div>
+          
+          <div class="flex-grow-1 ms-4">
+            <div class="row">
+              <div class="col-lg mb-3 mb-lg-0">
+                <h1 class="page-header-title h2">Maria Williams</h1>
 
-        <!-- Card -->
-        <div class="card card-bordered shadow-none">
-          <div class="card-body">
-            <!-- Form -->
-            <form>
-              <!-- Form -->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Product logo</label>
+                <ul class="list-inline list-separator">
+                  <li class="list-inline-item">
+                    <i class="bi-geo-alt-fill text-primary me-1"></i> London, UK
+                  </li>
+                  <li class="list-inline-item">maria@gmail.com</li>
+                  <li class="list-inline-item">+1 (062) 109-9222</li>
+                </ul>
+              </div>
+              <!-- End Col -->
+              
+              <div class="col-lg-auto align-self-lg-end text-lg-right">
+                <div class="d-flex gap-2">
+                  <a class="btn btn-primary btn-sm" href="#">
+                    <i class="bi-envelope-fill me-1"></i> Contact me
+                  </a>
 
-                <div class="col-sm-9">
-                  <!-- Media -->
-                  <div class="d-flex align-items-center">
-                    <!-- Avatar -->
-                    <label class="avatar avatar-xl avatar-circle" for="avatarUploader">
-                      <img id="avatarImg" class="avatar-img" src="../assets/img/160x160/img2.jpg" alt="Image Description">
-                    </label>
+                  <!-- Dropdown -->
+                  <div class="dropdown">
+                    <a class="btn btn-outline-primary btn-sm btn-icon" href="#" id="employeeProfileShareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
+                      <i class="bi-share-fill"></i>
+                    </a>
 
-                    <div class="d-grid d-sm-flex gap-2 ms-4">
-                      <div class="btn btn-primary btn-sm form-attachment-btn">Upload Logo
-                        <input type="file" class="js-file-attach form-attachment-btn-label" id="avatarUploader"
-                               data-hs-file-attach-options='{
-                                  "textTarget": "#avatarImg",
-                                  "mode": "image",
-                                  "targetAttr": "src",
-                                  "resetTarget": ".js-file-attach-reset-img",
-                                  "resetImg": "../assets/img/160x160/img2.jpg",
-                                  "allowTypes": [".png", ".jpeg", ".jpg"]
-                               }'>
-                      </div>
-                      <!-- End Avatar -->
-
-                      <button type="button" class="js-file-attach-reset-img btn btn-white btn-sm">Delete</button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="employeeProfileShareDropdown">
+                      <a class="dropdown-item" href="#">
+                        <i class="bi-facebook dropdown-item-icon"></i> Facebook
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi-twitter dropdown-item-icon"></i> Twitter
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi-linkedin dropdown-item-icon"></i> LinkedIn
+                      </a>
                     </div>
                   </div>
-                  <!-- End Media -->
+                  <!-- End Dropdown -->
                 </div>
               </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppProjectName" class="col-sm-3 col-form-label">Project name</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control form-control-lg" id="submitAppProjectName" placeholder="project name" aria-label="project name">
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppWebsite" class="col-sm-3 col-form-label form-label">App website</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control form-control-lg" id="submitAppWebsite" placeholder="https://example.com" aria-label="https://example.com">
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Preview image</label>
-
-                <div class="col-sm-9">
-                  <!-- File Attachment Input -->
-                  <div id="dropzoneUpload" class="js-dropzone dz-dropzone dz-dropzone-card">
-                    <div class="dz-message">
-                      <img class="avatar mb-3" src="../assets/svg/illustrations/add-file.svg" alt="Image Description">
-                      <span class="d-block">Browse your device and upload images</span>
-                      <span class="d-block text-muted small">Maximum file size is 2MB</span>
-                    </div>
-                  </div>
-                  <!-- End File Attachment Input -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form -->
-              <div class="row mb-3">
-                <label for="submitAppCategoryLabel" class="col-sm-3 col-form-label form-label">Category</label>
-                
-                <div class="col-sm-9">
-                  <!-- Select -->
-                  <select class="form-select form-select-lg" id="submitAppCategoryLabel">
-                    <option value="Ecommerce">Ecommerce</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Marketplace">Marketplace</option>
-                    <option value="Social">Social</option>
-                    <option value="Others">Others</option>
-                  </select>
-                  <!-- End Select -->
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form-->
-              <div class="row mb-3">
-                <label for="shortDescriptionLabel" class="col-sm-3 col-form-label form-label">Short description</label>
-                
-                <div class="col-sm-9">
-                  <div class="d-flex justify-content-end">
-                    <span id="maxLengthShortDescriptionCountCharacters" class="form-label-secondary"></span>
-                  </div>
-
-                  <textarea class="js-count-characters form-control" id="shortDescriptionLabel" placeholder="This is to provide an idea of what does your product do. A good short summary will entice users to click and visit your page." maxlength="70"
-                          data-hs-count-characters-options='{
-                            "output": "#maxLengthShortDescriptionCountCharacters"
-                          }'></textarea>
-                </div>
-              </div>
-              <!-- End Form -->
-
-              <!-- Form-->
-              <div class="row mb-3">
-                <label class="col-sm-3 col-form-label form-label">Detailed description</label>
-                
-                <div class="col-sm-9">
-                  <!-- Quill -->
-                  <div class="quill-custom">
-                    <div class="js-quill" style="height: 15rem;"
-                         data-hs-quill-options='{
-                         "placeholder": "A detailed summary will better explain your products to the audiences. Our users will see this in your dedicated product page.",
-                          "modules": {
-                            "toolbar": [
-                              ["bold", "italic", "underline", "strike", "link", "image", "blockquote", "code", {"list": "bullet"}]
-                            ]
-                          }
-                         }'>
-                    </div>
-                  </div>
-                  <!-- End Quill -->
-                </div>
-              </div>
-              <!-- End Form-->
-
-              <div class="text-center mt-5">
-                <button type="submit" class="btn btn-primary btn-lg">Submit your project</button>
-              </div>
-            </form>
-            <!-- End Form -->
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
           </div>
         </div>
-        <!-- End Card -->
+        <!-- End Media -->
       </div>
     </div>
-    <!-- End Form Card -->
+    <!-- End Page Header -->
+
+    <!-- Content -->
+    <div class="container content-space-2">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="mb-8">
+            <h3>Bio</h3>
+
+            <p>A Frontend developer, and UI/UX Designer offering over 8 years of success in various leadership roles in the areas of Web design and development and customer support. I love coding and problem solving. Love working on both server and client side code. I like to get to know my clients closely to facilitate better communication.</p>
+
+            <ul class="mb-4">
+              <li>Authorized to work in the UK for any employer</li>
+              <li>Willing to relocate to anywhere</li>
+            </ul>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="mb-4">
+                  <h5>Desired job title</h5>
+                  <p>UI Designer/Developer</p>
+                </div>
+                
+                <div class="mb-4">
+                  <h5>Desired job types</h5>
+                  <p>Full time</p>
+                </div>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-sm-6">
+                <div class="mb-4">
+                  <h5>Desired work schedule</h5>
+                  <p>Monday to Friday</p>
+                </div>
+
+                <div class="mb-4">
+                  <h5>Desired salary</h5>
+                  <p>$90k per year</p>
+                </div>
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+
+          <div class="mb-8">
+            <div class="mb-4">
+              <h3>Work experience</h3>
+            </div>
+
+            <!-- Step -->
+            <ul class="step step-icon-sm">
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar step-avatar-sm">
+                    <img class="step-avatar-img" src="../assets/svg/brands/dropbox-icon.svg" alt="Image Description">
+                  </div>
+                  <div class="step-content">
+                    <h5 class="step-title">Head of IT Department</h5>
+                    <span class="d-block text-dark">Dropbox - London</span>
+                    <small class="d-block mb-4">December 2016 to Present</small>
+                    <p class="text-body mb-0">The company has high expectations and using OKRs there is a mutual understanding of expectations and performance.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar step-avatar-sm">
+                    <img class="step-avatar-img" src="../assets/svg/brands/mailchimp-icon.svg" alt="Image Description">
+                  </div>
+                  <div class="step-content">
+                    <h5 class="step-title">Senior Software Engineer</h5>
+                    <span class="d-block text-dark">Mailchimp - London</span>
+                    <small class="d-block mb-4">November 2014 to December 2016</small>
+                    <p class="text-body mb-0">This is an excellent company and they reward their employees. It's becoming a big company but it's still private, so the culture is as good as it gets at 1,000+ employees if you ask me. Managers are still adapting to the growth I think, but everyone has to. Great place to work.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar step-avatar-sm">
+                    <img class="step-avatar-img" src="../assets/svg/brands/google-icon.svg" alt="Image Description">
+                  </div>
+                  <div class="step-content">
+                    <h5 class="step-title">Junior Software Engineer</h5>
+                    <span class="d-block text-dark">Google - London</span>
+                    <small class="d-block mb-4">January 2014 to November 2014</small>
+                    <p class="text-body mb-0">Work in Google is one of the beautiful experience I can do in my entire life. There are a lot of interesting thing to learn and manager respect your time and your personality.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-soft-dark">
+                    <i class="bi-briefcase-fill"></i>
+                  </span>
+                  <div class="step-content">
+                    <h5 class="step-title">Internship</h5>
+                    <span class="d-block text-dark">Htmlstream under Pixeel Ltd. - London</span>
+                    <small class="d-block mb-4">December 2013 to January 2014</small>
+                    <p class="text-body mb-0">My first steps...</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- End Step -->
+          </div>
+
+          <div class="mb-8">
+            <div class="mb-3">
+              <h3>Education</h3>
+            </div>
+
+            <!-- Step -->
+            <ul class="step step-icon-sm">
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <div class="step-avatar step-avatar-sm">
+                    <img class="step-avatar-img" src="../assets/svg/brands/the-university-of-manchester.svg" alt="Image Description">
+                  </div>
+                  <div class="step-content">
+                    <h5 class="step-title">Master's degree in Computer Software Engineering</h5>
+                    <span class="d-block text-dark">The University of Manchester - Manchester</span>
+                    <small class="d-block">October 2012 to December 2013</small>
+                  </div>
+                </div>
+              </li>
+
+              <li class="step-item">
+                <div class="step-content-wrapper">
+                  <span class="step-icon step-icon-soft-dark">
+                    <i class="bi-award"></i>
+                  </span>
+                  <div class="step-content">
+                    <h5 class="step-title">Bachelor's degree in Computer Software Engineering</h5>
+                    <span class="d-block text-dark">University of Oxford - Oxford</span>
+                    <small class="d-block">October 2009 to May 2012</small>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- End Step -->
+          </div>
+
+          <div class="mb-8">
+            <div class="mb-3">
+              <h3>Skills</h3>
+            </div>
+
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">Bootstrap (8 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">HTML5 (8 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">CSS3 (8 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">SASS (7 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">User Interface (UI) (8 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">Adobe Photoshop (3 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">Adobe Illustrator (5 years)</span>
+            <span class="badge bg-soft-dark text-dark py-2 px-3 m-1">Figma (1 year)</span>
+          </div>
+
+          <div class="mb-8">
+            <div class="mb-3">
+              <h3>Languages</h3>
+            </div>
+
+            <ul class="list-unstyled list-py-1">
+              <li><span class="text-dark">English <span class="text-body small ms-1">&mdash; Native</span></span></li>
+              <li><span class="text-dark">Deutsch <span class="text-body small ms-1">&mdash; Fluent</span></span></li>
+              <li><span class="text-dark">French <span class="text-body small ms-1">&mdash; Beginner</span></span></li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <h3>Links</h3>
+          </div>
+
+          <ul class="list-unstyled list-py-1">
+            <li><a href="#">www.github.com/maria-w</a></li>
+            <li><a href="#">www.twitter.com/maria-w</a></li>
+          </ul>
+
+          <!-- Sticky Block End Point -->
+          <div id="stickyBlockEndPoint"></div>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-lg-4">
+          <div class="ps-lg-4">
+            <!-- Sticky Block -->
+            <div id="stickyBlockStartPoint">
+              <div class="js-sticky-block"
+                   data-hs-sticky-block-options='{
+                     "parentSelector": "#stickyBlockStartPoint",
+                     "breakpoint": "lg",
+                     "startPoint": "#stickyBlockStartPoint",
+                     "endPoint": "#stickyBlockEndPoint",
+                     "stickyOffsetTop": 20,
+                     "stickyOffsetBottom": 20
+                   }'>
+                <!-- Card -->
+                <div class="card card-bordered">
+                  <div class="card-body">
+                    <div class="mb-5">
+                      <h3>Search millions of resumes across your industry and location.</h3>
+                    </div>
+
+                    <div class="d-grid mb-5">
+                      <a class="btn btn-primary" href="#">Select a subscription</a>
+                    </div>
+                      
+                    <div class="w-65 mx-auto">
+                      <img class="card-img-bottom" src="../assets/svg/illustrations/oc-chatting.svg" alt="Image Description">
+                    </div>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Sticky Block -->
+          </div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- Content -->
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
@@ -774,20 +927,14 @@
   <!-- JS Implementing Plugins -->
   <!-- bundlejs:vendor [..] -->
   <script src="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+  <script src="../assets/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
   <script src="../assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-  <script src="../assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
-  <script src="../assets/vendor/hs-count-characters/dist/js/hs-count-characters.js"></script>
-  <script src="../node_modules/quill/dist/quill.min.js"></script>
-  <script src="../node_modules/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="../assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
 
   <!-- JS Front -->
   <!-- bundlejs:theme [..] -->
   <script src="../assets/js/hs.core.js"></script>
   <script src="../assets/js/hs.bs-dropdown.js"></script>
-  <script src="../assets/js/hs.bs-validation.js"></script>
-  <script src="../assets/js/hs.quill.js"></script>
-  <script src="../assets/js/hs.dropzone.js"></script>
-
   <!-- JS Plugins Init. -->
   <script>
     (function() {
@@ -800,14 +947,9 @@
         })
 
 
-      // INITIALIZATION OF BOOTSTRAP VALIDATION
+      // INITIALIZATION OF SHOW ANIMATIONS
       // =======================================================
-      HSBsValidation.init('.js-validate', {
-        onSubmit: data => {
-          data.event.preventDefault()
-          alert('Submited')
-        }
-      })
+      new HSShowAnimation('.js-animation-link')
 
 
       // INITIALIZATION OF BOOTSTRAP DROPDOWN
@@ -820,24 +962,11 @@
       new HSGoTo('.js-go-to')
 
 
-      // INITIALIZATION OF FILE ATTACH
+      // INITIALIZATION OF STICKY BLOCKS
       // =======================================================
-      new HSFileAttach('.js-file-attach')
-
-
-      // INITIALIZATION OF COUNT CHARACTERS
-      // =======================================================
-      new HSCountCharacters('.js-count-characters')
-
-
-      // INITIALIZATION OF QUILLJS EDITOR
-      // =======================================================
-      HSCore.components.HSQuill.init('.js-quill')
-
-
-      // INITIALIZATION OF DROPZONE
-      // =======================================================
-      HSCore.components.HSDropzone.init('.js-dropzone')
+      new HSStickyBlock('.js-sticky-block', {
+        targetSelector: document.getElementById('header').classList.contains('navbar-fixed') ? '#header' : null
+      })
     })()
   </script>
 </body>
