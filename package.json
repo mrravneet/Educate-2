@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "author": "htmlstream",
   "scripts": {
+    "build": "cd ./gulpfiles && node dist.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "cd ./gulpfiles && node debuger.js"
   },

@@ -43,8 +43,7 @@
             <div class="d-flex justify-content-between align-items-center px-lg-5 px-xl-10">
               <div class="d-none d-md-block">
                 <!-- Search Form -->
-                <form id="docsSearch" class="position-relative"
-                      data-hs-list-options='{
+                <form id="docsSearch" class="position-relative" data-hs-list-options='{
                        "searchMenu": true,
                        "keyboard": true,
                        "item": "searchTemplate",
@@ -119,8 +118,7 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Navbar -->
-    <nav class="js-nav-scroller navbar navbar-expand-lg navbar-sidebar navbar-vertical navbar-light bg-white border-end"
-          data-hs-nav-scroller-options='{
+    <nav class="js-nav-scroller navbar navbar-expand-lg navbar-sidebar navbar-vertical navbar-light bg-white border-end" data-hs-nav-scroller-options='{
             "type": "vertical",
             "target": ".navbar-nav .active",
             "offset": 80
@@ -154,7 +152,7 @@
             </a>
           </div>
           <!-- End Default Logo -->
-      
+
           <!-- Nav -->
           <ul class="nav nav-segment nav-fill nav-justified">
             <li class="nav-item">
@@ -172,7 +170,7 @@
             <li class="nav-item">
               <span class="nav-subtitle">Documentation</span>
             </li>
-        
+
             <li class="nav-item">
               <a class="nav-link " href="../documentation/index.html">Introduction</a>
             </li>
@@ -734,14 +732,14 @@
       <div class="alert alert-soft-dark" role="alert">
         <h4>Heads up!</h4>
         <p>Do more with <code>config.js</code> file to control <code>gulp dist</code> and <code>gulp build</code> processes:</p>
-        
+
         <ul class="list-py-1">
           <li>Change directory folder and bundle file names</li>
           <li>Exclude any css/js files from bundle files</li>
           <li>Copy dependencies from one to another location</li>
           <li>and so on</li>
         </ul>
-        
+
         <p class="mb-0">More detailed information of <code>config.js</code> options can be found on <a class="link" href="#configuration">Configuration</a> section below on this page.</p>
       </div>
       <!-- End Alert -->
@@ -798,7 +796,7 @@
 
           <h5>Example</h5>
           <p>Considering the file is located at the roof of <code>./src/</code> folder:</p>
-          
+
           <pre class="rounded prism-light mb-4">
             <code class="language-html" data-lang="html">
               &lt;link rel="stylesheet" href="@@autopath/assets/css/theme.css"&gt;
@@ -1174,7 +1172,7 @@
       </h2>
       <!-- End Heading -->
 
-      <p>All configuration options can be found inside the <code>./config.js</code> file. As mentioned above, you don't need to worry about the rest Gulp files. We heighly don't recommend touching the other Gulp related files, since all settings included inside this <code>config.js</code> file - unless there are cases where project needs to be extended the Gulp Toolkit further. To keep the development process as much as flexible, the configuration options are provided. Read below for more  detailed descriptions and examples.</p>
+      <p>All configuration options can be found inside the <code>./config.js</code> file. As mentioned above, you don't need to worry about the rest Gulp files. We heighly don't recommend touching the other Gulp related files, since all settings included inside this <code>config.js</code> file - unless there are cases where project needs to be extended the Gulp Toolkit further. To keep the development process as much as flexible, the configuration options are provided. Read below for more detailed descriptions and examples.</p>
 
       <!-- Alert -->
       <div class="alert alert-soft-dark" role="alert">
@@ -1312,24 +1310,24 @@
           <h5>Variables in functions</h5>
           <p>In addition, we added color functions that can be used inside <code>html</code> and <code>svg</code> files.</p>
 
-          <p>Convert HEX color to rgba with <code>[@@F]RGBA[color, opacity]</code> function. The opacity values can be between <code>0.1</code> to <code>1</code> same like in SASS.</p>
+          <p>Convert HEX color to rgba with <code>gulpRGBA[color, opacity]</code> function. The opacity values can be between <code>0.1</code> to <code>1</code> same like in SASS.</p>
           <pre class="rounded prism-light mb-4">
             <code class="language-js" data-lang="js">
-              [@@F]RGBA[@@vars.style.color,.5]
+              gulpRGBA[@@vars.style.color,.5]
             </code>
           </pre>
 
-          <p>Make color lighter with <code>[@@F]Lighten[color, value]</code> function. The larger the integer value, the lighter.</p>
+          <p>Make color lighter with <code>gulpLighten[color, value]</code> function. The larger the integer value, the lighter.</p>
           <pre class="rounded prism-light mb-4">
             <code class="language-js" data-lang="js">
-              [@@F]Lighten[@@vars.style.color, 50]
+              gulpLighten[@@vars.style.color, 50]
             </code>
           </pre>
 
-          <p>Make color darker with <code>[@@F]Darken[color, value]</code> function. The larger the integer value, the lighter.</p>
+          <p>Make color darker with <code>gulpDarken[color, value]</code> function. The larger the integer value, the lighter.</p>
           <pre class="rounded prism-light">
             <code class="language-js" data-lang="js">
-              [@@F]Darken[@@vars.style.color, 50]
+              gulpDarken[@@vars.style.color, 50]
             </code>
           </pre>
 
@@ -1860,8 +1858,7 @@
 
   <!-- ========== SECONDARY CONTENTS ========== -->
   <!-- Go To -->
-  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
-     data-hs-go-to-options='{
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
        "offsetTop": 700,
        "position": {
          "init": {

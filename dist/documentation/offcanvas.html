@@ -43,8 +43,7 @@
             <div class="d-flex justify-content-between align-items-center px-lg-5 px-xl-10">
               <div class="d-none d-md-block">
                 <!-- Search Form -->
-                <form id="docsSearch" class="position-relative"
-                      data-hs-list-options='{
+                <form id="docsSearch" class="position-relative" data-hs-list-options='{
                        "searchMenu": true,
                        "keyboard": true,
                        "item": "searchTemplate",
@@ -119,8 +118,7 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Navbar -->
-    <nav class="js-nav-scroller navbar navbar-expand-lg navbar-sidebar navbar-vertical navbar-light bg-white border-end"
-          data-hs-nav-scroller-options='{
+    <nav class="js-nav-scroller navbar navbar-expand-lg navbar-sidebar navbar-vertical navbar-light bg-white border-end" data-hs-nav-scroller-options='{
             "type": "vertical",
             "target": ".navbar-nav .active",
             "offset": 80
@@ -154,7 +152,7 @@
             </a>
           </div>
           <!-- End Default Logo -->
-      
+
           <!-- Nav -->
           <ul class="nav nav-segment nav-fill nav-justified">
             <li class="nav-item">
@@ -172,7 +170,7 @@
             <li class="nav-item">
               <span class="nav-subtitle">Documentation</span>
             </li>
-        
+
             <li class="nav-item">
               <a class="nav-link " href="../documentation/index.html">Introduction</a>
             </li>
@@ -592,18 +590,18 @@
         How it works <a class="anchorjs-link" href="#how-it-works" aria-label="Anchor" data-anchorjs-icon="#"></a>
       </h2>
       <!-- End Heading -->
-      
+
       <p>Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and <code>data</code> attributes are used to invoke our JavaScript.</p>
-      
+
       <ul>
         <li>Offcanvas shares some of the same JavaScript code as modals. Conceptually, they are quite similar, but they are separate plugins.</li>
         <li>Similarly, some <a class="link" href="#sass">source Sass</a> variables for offcanvas&rsquo;s styles and dimensions are inherited from the modal&rsquo;s variables.</li>
         <li>When shown, offcanvas includes a default backdrop that can be clicked to hide the offcanvas.</li>
         <li>Similar to modals, only one offcanvas can be shown at a time.</li>
       </ul>
-      
+
       <p><span class="text-dark fw-bold">Heads up!</span> Given how CSS handles animations, you cannot use <code>margin</code> or <code>translate</code> on an <code>.offcanvas</code> element. Instead, use the class as an independent wrapping element.</p>
-      
+
       <div class="alert alert-soft-dark">
         The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a class="link" href="https://getbootstrap.com/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
       </div>
@@ -621,12 +619,12 @@
       <!-- End Heading -->
 
       <p>Use the buttons below to show and hide an offcanvas element via JavaScript that toggles the <code>.show</code> class on an element with the <code>.offcanvas</code> class.</p>
-      
+
       <ul>
         <li><code>.offcanvas</code> hides content (default)</li>
         <li><code>.offcanvas.show</code> shows content</li>
       </ul>
-      
+
       <p>You can use a link with the <code>href</code> attribute, or a button with the <code>data-bs-target</code> attribute. In both cases, the <code>data-bs-toggle=&quot;offcanvas&quot;</code> is required.</p>
 
       <!-- Card -->
@@ -729,14 +727,14 @@
       <!-- End Heading -->
 
       <p>There&rsquo;s no default placement for offcanvas components, so you must add one of the modifier classes below;</p>
-      
+
       <ul>
         <li><code>.offcanvas-start</code> places offcanvas on the left of the viewport (shown above)</li>
         <li><code>.offcanvas-end</code> places offcanvas on the right of the viewport</li>
         <li><code>.offcanvas-top</code> places offcanvas on the top of the viewport</li>
         <li><code>.offcanvas-bottom</code> places offcanvas on the bottom of the viewport</li>
       </ul>
-      
+
       <p>Try the top, right, and bottom examples out below.</p>
 
       <!-- Card -->
@@ -1021,8 +1019,7 @@
 
   <!-- ========== SECONDARY CONTENTS ========== -->
   <!-- Go To -->
-  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
-     data-hs-go-to-options='{
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
        "offsetTop": 700,
        "position": {
          "init": {
