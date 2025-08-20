@@ -2,6 +2,22 @@
   File for your custom SCSS style
 ------------------------------------*/
 
+/* Navbar brand placeholder (replaces logo image until user uploads real logo) */
+.navbar-brand-placeholder {
+  display: inline-block;
+  width: 7.5rem;
+  height: 4.50rem;
+  background: #ff6a3d;
+  border-radius: .25rem;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand-placeholder {
+    width: 6rem;
+    height: 4.2rem;
+  }
+}
+
 /* Global font imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Bebas+Neue&display=swap');
 
@@ -343,4 +359,68 @@ button, input, select, textarea {
   background-color: #ff6a4e;
   border-color: #ff6a4e;
   color: #fff;
+}
+
+/* Mobile typography adjustments */
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: clamp(2rem, 8.5vw, 3rem);
+    line-height: 1.05;
+    margin-left: 0;
+  }
+
+  .Thought {
+    font-size: 1.45rem;
+    letter-spacing: .03em;
+  }
+  
+  /* Mobile navbar font sizing */
+  #header .navbar-nav {
+    gap: .25rem;
+  }
+  #header .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding-top: .35rem;
+    padding-bottom: .35rem;
+  }
+
+  /* Mobile sizing for Sponsor button in navbar */
+  #header .btn-sponsor {
+    font-size: 0.95rem;
+    padding: .45rem .9rem;
+  }
+
+  /* Why We section: left-align and reduce size under image on mobile */
+  .whywe {
+    text-align: left !important;
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .whywe h2 {
+    font-size: 1.25rem !important;
+    white-space: normal !important;
+    margin-bottom: .25rem !important;
+  }
+  .whywe h2 span:nth-child(2) {
+    margin-left: .5rem !important;
+  }
+
+  /* Why Sponsor block: unify fonts and responsive buttons */
+  .why-sponsor-section h1 {
+    font-size: 2rem !important;
+  }
+  .why-sponsor-section p {
+    font-size: 1rem !important;
+  }
+  .why-sponsor-section .cta-group {
+    gap: .5rem !important;
+    margin-top: 1rem !important;
+  }
+  .why-sponsor-section .cta-group .btn {
+    font-size: .95rem !important;
+    padding: .5rem .9rem !important;
+    border-radius: 999px !important;
+  }
+
 }
