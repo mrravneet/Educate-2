@@ -1,0 +1,86 @@
+    <div class="container content-space-t-1  ">
+
+      <div class="loading-spinner text-center">
+        <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Loading children profiles...</p>
+      </div>
+
+      <div class="error-message">
+        <h5>Unable to load children profiles</h5>
+        <p>Please try again later or contact support.</p>
+      </div>
+
+      <div class="row g-4" id="childrenCardsContainer"></div>
+    </div>
+
+    <script>
+    const mockApiData = [
+      { id: 1, name: "SUKHMAN", subtitle: "Empower a rural kid\nsave the future", image: "../assets/img/others/img2.png", sponsorLink: "#sponsor-sukhman" },
+      { id: 2, name: "AMANDEEP", subtitle: "Empower a rural kid\nsave the future", image: "../assets/img/others/img2.png", sponsorLink: "#sponsor-amandeep" },
+      { id: 3, name: "RAGHAV", subtitle: "Empower a rural kid\nsave the future", image: "../assets/img/others/img2.png", sponsorLink: "#sponsor-raghav" },
+      { id: 4, name: "DEEPAK", subtitle: "Empower a rural kid\nsave the future", image: "../assets/img/others/img2.png", sponsorLink: "#sponsor-deepak" }
+      
+  ];
+  
+  
+    function createChildCard(child) {
+      return `
+       
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+          <div class="child-card h-100 ">
+            <div class="child-header">
+              <div class="child-details">
+                
+                  <div> 
+                      <h3 class="child-name">${child.name}</h3>
+                  </div>
+                   <div class="child-two">
+                      <p class="child-subtitle mb-0">${child.subtitle.replace('\n', '<br>')}</p>
+                      <a href="${child.sponsorLink}" class="child-sponsor-btn">SPONSOR NOW</a>
+                   </div>
+               
+              </div>
+              
+            </div>
+            <div class="child-image-wrap ">
+              <img src="${child.image}" alt="${child.name}" class="child-img">
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  
+    async function loadChildrenData() {
+      const loadingSpinner = document.querySelector('.loading-spinner');
+      const errorMessage = document.querySelector('.error-message');
+      const container = document.getElementById('childrenCardsContainer');
+  
+      try {
+        loadingSpinner.style.display = 'block';
+        errorMessage.style.display = 'none';
+  
+        await new Promise(resolve => setTimeout(resolve, 800));
+        const children = mockApiData;
+  
+        loadingSpinner.style.display = 'none';
+        container.innerHTML = '';
+        children.forEach(child => { container.innerHTML += createChildCard(child); });
+      } catch (error) {
+        console.error('Error loading children data:', error);
+        loadingSpinner.style.display = 'none';
+        errorMessage.style.display = 'block';
+      }
+    }
+  
+    document.addEventListener('DOMContentLoaded', loadChildrenData);
+  
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('child-sponsor-btn')) {
+        e.preventDefault();
+        const childName = e.target.closest('.child-card').querySelector('.child-name').textContent;
+        alert(`Redirecting to sponsor ${childName}...`);
+      }
+    });
+  </script>

@@ -1,0 +1,66 @@
+<div class="container content-space-t-2 content-space-b-2 py-2">
+  <!-- WHY WE Section -->
+
+  <!-- WHY SPONSOR Section -->
+  <div class="row justify-content-center">
+    <div class=" text-center">
+      <h1 class="text-center fw-bold text-uppercase" style="font-size: clamp(3rem, 8vw, 7.2rem); white-space: nowrap; color: black; margin-bottom: 2rem;">WHY SPONSOR</h1>
+
+      <p class="text-center text-dark" style="font-size: clamp(1rem, 2.5vw, 1.7rem); line-height: 1.6; margin-top: 2rem;">
+        2,50,000 out-of-school needy children in Punjab<br>that need to be brought into Schools.
+      </p>
+
+      <!-- Button and Text Section -->
+      <div class="d-flex justify-content-center align-items-center gap-3 mt-5">
+        <button id="selectKidBtn" class="btn  fw-semibold text-uppercase px-3 py-2 active-btn" style="background-color: #FF6B47; border: none; border-radius: 50px; font-size: 1.1rem;">
+          SELECT A KID
+        </button>
+        <button id="browseListBtn" class="btn fw-semibold text-uppercase px-3 py-2 inactive-btn" style="background-color: transparent; border-radius: 50px; font-size: 1.1rem; color: #FF6B47;">
+          OR BROWS A LIST
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .active-btn
+  {
+    background-color: #FF6B47 !important;
+    color: white !important;
+    border: none !important;
+  }
+
+  .inactive-btn
+  {
+    background-color: transparent !important;
+    color: black !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const selectKidBtn = document.getElementById('selectKidBtn');
+      const browseListBtn = document.getElementById('browseListBtn');
+  
+      // Function to toggle button states
+      function toggleButtons(activeBtn, inactiveBtn) {
+          // Remove all classes first
+          selectKidBtn.classList.remove('active-btn', 'inactive-btn');
+          browseListBtn.classList.remove('active-btn', 'inactive-btn');
+          
+          // Add appropriate classes
+          activeBtn.classList.add('active-btn');
+          inactiveBtn.classList.add('inactive-btn');
+      }
+  
+      // Event listeners for button clicks
+      selectKidBtn.addEventListener('click', function() {
+          toggleButtons(selectKidBtn, browseListBtn);
+      });
+  
+      browseListBtn.addEventListener('click', function() {
+          toggleButtons(browseListBtn, selectKidBtn);
+      });
+  });
+  </script>

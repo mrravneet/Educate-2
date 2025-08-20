@@ -32,7 +32,9 @@
             "fixMoment": 1000,
             "fixEffect": "slide"
           }'>
-  
+    <!-- Topbar -->
+    
+    <!-- End Topbar -->
 
     <div class="container">
       <nav class="js-mega-menu navbar-nav-wrap">
@@ -43,7 +45,14 @@
         <!-- End Default Logo -->
 
         <!-- Toggler -->
-    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-default">
+            <i class="bi-list"></i>
+          </span>
+          <span class="navbar-toggler-toggled">
+            <i class="bi-x"></i>
+          </span>
+        </button>
         <!-- End Toggler -->
       
         <!-- Collapse -->
@@ -285,6 +294,166 @@
       </div>
 
     </div>
+
+    <div>
+      <div class="container content-space-t-2 content-space-b-2 py-2">
+          <!-- WHY WE Section -->
+    
+  
+          <!-- WHY SPONSOR Section -->
+          <div class="row justify-content-center">
+            <div class=" text-center">
+                     <h1 class="text-center fw-bold text-uppercase" style="font-size: clamp(3rem, 8vw, 7.2rem); white-space: nowrap; color: black; margin-bottom: 2rem;">WHY SPONSOR</h1>
+         
+                     <p class="text-center text-dark" style="font-size: clamp(1rem, 2.5vw, 1.7rem); line-height: 1.6; margin-top: 2rem;">
+                 2,50,000 out-of-school needy children in Punjab<br>that need to be brought into Schools.
+                </p>
+          
+                <!-- Button and Text Section -->
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-5">
+                  <button id="selectKidBtn" class="btn  fw-semibold text-uppercase px-3 py-2 active-btn" style="background-color: #FF6B47; border: none; border-radius: 50px; font-size: 1.1rem;">
+                    SELECT A KID
+                  </button>
+                  <button id="browseListBtn" class="btn fw-semibold text-uppercase px-3 py-2 inactive-btn" style="background-color: transparent; border-radius: 50px; font-size: 1.1rem; color: #FF6B47;">
+                    OR BROWS A LIST
+                  </button>
+                </div>
+            </div>
+          </div>
+        </div>
+  
+        <style>
+          .active-btn {
+            background-color: #FF6B47 !important;
+            color: white !important;
+            border: none !important;
+          }
+  
+          .inactive-btn {
+            background-color: transparent !important;
+            color: black !important;
+          }
+        </style>
+  
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectKidBtn = document.getElementById('selectKidBtn');
+            const browseListBtn = document.getElementById('browseListBtn');
+  
+            // Function to toggle button states
+            function toggleButtons(activeBtn, inactiveBtn) {
+                // Remove all classes first
+                selectKidBtn.classList.remove('active-btn', 'inactive-btn');
+                browseListBtn.classList.remove('active-btn', 'inactive-btn');
+          
+                // Add appropriate classes
+                activeBtn.classList.add('active-btn');
+                inactiveBtn.classList.add('inactive-btn');
+            }
+  
+            // Event listeners for button clicks
+            selectKidBtn.addEventListener('click', function() {
+                toggleButtons(selectKidBtn, browseListBtn);
+            });
+  
+            browseListBtn.addEventListener('click', function() {
+                toggleButtons(browseListBtn, selectKidBtn);
+            });
+        });
+        </script>
+  
+    </div>
+    <div>
+          <div class="container content-space-t-1  ">
+ 
+
+          <div class="loading-spinner text-center">
+            <div class="spinner-border text-warning" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Loading children profiles...</p>
+          </div>
+  
+          <div class="error-message">
+            <h5>Unable to load children profiles</h5>
+            <p>Please try again later or contact support.</p>
+          </div>
+  
+          <div class="row g-4" id="childrenCardsContainer"></div>
+        </div>
+  
+        <script>
+          const mockApiData = [
+            { id: 1, name: "SUKHMAN", subtitle: "Empower a rural kid\nsave the future", image: "./assets/img/others/img2.png", sponsorLink: "#sponsor-sukhman" },
+            { id: 2, name: "AMANDEEP", subtitle: "Empower a rural kid\nsave the future", image: "./assets/img/others/img2.png", sponsorLink: "#sponsor-amandeep" },
+            { id: 3, name: "RAGHAV", subtitle: "Empower a rural kid\nsave the future", image: "./assets/img/others/img2.png", sponsorLink: "#sponsor-raghav" },
+            { id: 4, name: "DEEPAK", subtitle: "Empower a rural kid\nsave the future", image: "./assets/img/others/img2.png", sponsorLink: "#sponsor-deepak" }
+      
+        ];
+  
+  
+          function createChildCard(child) {
+            return `
+       
+              <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="child-card h-100 ">
+                  <div class="child-header">
+                    <div class="child-details">
+                
+                        <div> 
+                            <h3 class="child-name">${child.name}</h3>
+                        </div>
+                         <div class="child-two">
+                            <p class="child-subtitle mb-0">${child.subtitle.replace('\n', '<br>')}</p>
+                            <a href="${child.sponsorLink}" class="child-sponsor-btn">SPONSOR NOW</a>
+                         </div>
+               
+                    </div>
+              
+                  </div>
+                  <div class="child-image-wrap ">
+                    <img src="${child.image}" alt="${child.name}" class="child-img">
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+  
+          async function loadChildrenData() {
+            const loadingSpinner = document.querySelector('.loading-spinner');
+            const errorMessage = document.querySelector('.error-message');
+            const container = document.getElementById('childrenCardsContainer');
+  
+            try {
+              loadingSpinner.style.display = 'block';
+              errorMessage.style.display = 'none';
+  
+              await new Promise(resolve => setTimeout(resolve, 800));
+              const children = mockApiData;
+  
+              loadingSpinner.style.display = 'none';
+              container.innerHTML = '';
+              children.forEach(child => { container.innerHTML += createChildCard(child); });
+            } catch (error) {
+              console.error('Error loading children data:', error);
+              loadingSpinner.style.display = 'none';
+              errorMessage.style.display = 'block';
+            }
+          }
+  
+          document.addEventListener('DOMContentLoaded', loadChildrenData);
+  
+          document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('child-sponsor-btn')) {
+              e.preventDefault();
+              const childName = e.target.closest('.child-card').querySelector('.child-name').textContent;
+              alert(`Redirecting to sponsor ${childName}...`);
+            }
+          });
+        </script>
+  
+  
+   </div>
     <!-- End Hero -->
 
     <!-- Hero Image -->
