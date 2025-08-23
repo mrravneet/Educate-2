@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Educate to Save - Login</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+
+</head>
+
+<body>
+    <div class="login-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <!-- Logo Section -->
+            <div class="logo-section">
+              
+              
+                    <img class="" src="@@autopath/assets/svg/logos/educate.png" alt="Logo">
+              
+            </div>
+
+            <!-- Main Content -->
+            <div class="left-content">
+                <h1 class="you-are-title">You are</h1>
+                <h2 class="sunshine-title"><span id="typing-text"></span><span class="cursor">|</span></h2>
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="bottom-text">
+                > Educate to Save | An initiative by Baru Sahib
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <!-- Back Link -->
+            <a href="index.html" class="back-link">
+                <i class="bi-arrow-left"></i>
+                Go Back To Homepage
+            </a>
+            <div class="right-content">
+                <h3 class="welcome-title">Welcome back</h3>
+                <p class="welcome-subtitle">Login to manage your account.</p>
+
+
+
+                <form class="js-validate needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="loginEmail">Email address</label>
+                        <input type="email" class="form-control" name="email" id="loginEmail"
+                            placeholder="Email address" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <p class="info-text">A unique code will be sent to your email address. Please check your inbox.</p>
+                    <div class=" ">
+                        <button type="submit" class="btn btn-2fa">
+                            Get 2FA Code
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Global Compulsory -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="assets/js/hs.core.js"></script>
+    <script src="assets/js/hs.bs-validation.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        (function () {
+            // INITIALIZATION OF BOOTSTRAP VALIDATION
+            // =======================================================
+            if (typeof HSBsValidation !== 'undefined') {
+                HSBsValidation.init('.js-validate', {
+                    onSubmit: data => {
+                        data.event.preventDefault()
+                        // Here you would typically send the email for 2FA code
+                        alert('2FA code has been sent to your email address.')
+                    }
+                })
+            }
+        })()
+
+        // Typing Animation
+        const typingText = document.getElementById('typing-text');
+        const phrases = [
+            'a Sunshine.',
+            'everything more than being Special.',
+            'an Angel.',
+            'a Changemaker.',
+            'a Hero.'
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 150;
+        let deletingSpeed = 100;
+        let pauseTime = 2000;
+
+        function typeText() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                // Deleting text
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = deletingSpeed;
+            } else {
+                // Typing text
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 150;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Finished typing, pause then start deleting
+                setTimeout(() => {
+                    isDeleting = true;
+                    typeText();
+                }, pauseTime);
+                return;
+            }
+
+            if (isDeleting && charIndex === 0) {
+                // Finished deleting, move to next phrase
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeText, 500);
+                return;
+            }
+
+            setTimeout(typeText, typingSpeed);
+        }
+
+        // Start the typing animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(typeText, 1000);
+        });
+    </script>
+</body>
+
+</html>

@@ -11,6 +11,13 @@
   border-radius: .25rem;
 }
 
+/* Navbar logo sizing - same as login page */
+.navbar-brand img {
+  width: clamp(120px, 15vw, 220px);
+  height: auto;
+  object-fit: contain;
+}
+
 @media (max-width: 575.98px) {
   .navbar-brand-placeholder {
     width: 6rem;
@@ -88,7 +95,7 @@ button, input, select, textarea {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .05em;
-    font-size: 1.125rem; 
+    font-size: 14px; 
   }
   .btn-sponsor:hover {
     color: #fff;
@@ -147,11 +154,11 @@ button, input, select, textarea {
     text-transform: uppercase;
     letter-spacing: .08em;
     font-weight: 600;
-    font-size: 1.170rem; 
+    font-size: 14px; 
     
   }
   #header .navbar-nav .nav-link:hover {
-    color: #1a1a1a !important;
+    color: #FF5C38 !important;
   }
   
   
@@ -390,6 +397,13 @@ button, input, select, textarea {
     padding: .45rem .9rem;
   }
 
+  /* Mobile sizing for Login/Cart button in navbar */
+  #header .login-link {
+    font-size: 0.95rem;
+    padding-top: .35rem;
+    padding-bottom: .35rem;
+  }
+
   /* Why We section: left-align and reduce size under image on mobile */
   .whywe {
     text-align: left !important;
@@ -422,5 +436,236 @@ button, input, select, textarea {
     padding: .5rem .9rem !important;
     border-radius: 999px !important;
   }
-
 }
+
+/*------------------------------------
+  Login Page Styles
+------------------------------------*/
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left-panel {
+  flex: 0 0 30%;
+  background-color: #E2E2E2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(2rem, 5vw, 3rem);
+  position: relative;
+}
+
+.right-panel {
+  flex: 0 0 70%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(2rem, 5vw, 3rem);
+  position: relative;
+}
+
+.logo-section {
+  position: absolute;
+  top: clamp(1rem, 3vw, 2rem);
+  left: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.logo-section img {
+  width: clamp(120px, 15vw, 220px);
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-icon {
+  width: clamp(30px, 4vw, 40px);
+  height: clamp(30px, 4vw, 40px);
+  background: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.logo-text {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.back-link {
+  position: absolute;
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  color: #0C1559;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  color: #F97316;
+  transform: translateX(-5px);
+}
+
+.left-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.you-are-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #0C1559;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.sunshine-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #f97316;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: clamp(1rem, 3vw, 2rem);
+  color: #0C1559;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  font-weight: 600;
+}
+
+.right-content {
+  width: 100%;
+  max-width: 500px;
+}
+
+.welcome-title {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 700;
+  color: #0C1559;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+  color: #0C1559;
+  margin-bottom: 2rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.form-control {
+  width: 100%;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: clamp(0.6rem, 2vw, 0.75rem) clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.25);
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.info-text {
+  color: #0C1559;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.info-text:hover {
+  color: #F97316;
+  background-color: rgba(249, 115, 22, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-2fa {
+  width: clamp(120px, 40%, 150px);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  background: #F97316;
+  color: white;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: clamp(0.6rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1rem);
+}
+
+.btn-2fa:hover {
+  background: #F97316;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsive for login page */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    flex: 1;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .back-link {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+
